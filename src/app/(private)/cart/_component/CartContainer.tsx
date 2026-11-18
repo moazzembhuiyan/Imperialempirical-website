@@ -9,9 +9,14 @@ import { useDeleteCartMutation, useGetCartQuery } from '@/redux/api/cartApi';
 import { toast } from 'sonner';
 import EmptyState from '@/component/shared/EmptyState/EmptyState';
 import { Skeleton } from '@/components/ui/skeleton';
+import { selectToken } from '@/redux/slices/authSlice';
+import { useSelector } from 'react-redux';
 
 export default function CartPage() {
-  const { data, isLoading, isError, refetch } = useGetCartQuery();
+  const token = useSelector(selectToken);
+  const { data, isLoading, isError, refetch } = useGetCartQuery(undefined, {
+    skip: !token,
+  });
   const [deleteCart, { isLoading: isDeleteLoading }] = useDeleteCartMutation();
 
   const handleRemoveItem = async (itemId) => {

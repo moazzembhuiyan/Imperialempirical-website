@@ -7,8 +7,11 @@ import Loader from '@/app/loading';
 import { PackageOpen, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
 import EmptyState from '@/component/shared/EmptyState/EmptyState';
+import { selectToken } from '@/redux/slices/authSlice';
+import { useSelector } from 'react-redux';
 
 export function OrderHistory() {
+  const token = useSelector(selectToken);
   const getStatusColor = (status = '') => {
     switch (status.toLowerCase()) {
       case 'delivered':
@@ -22,7 +25,9 @@ export function OrderHistory() {
     }
   };
 
-  const { data, isLoading, isError, refetch } = useGetOrdersQuery();
+  const { data, isLoading, isError, refetch } = useGetOrdersQuery(undefined, {
+    skip: !token,
+  });
   const [deleteOrder, { isLoading: isDeleteLoading }] = useDeleteOrderMutation();
 
   if (isLoading) {
