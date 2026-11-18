@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { Button } from '@/components/ui/button';
-import ConfettiLottie from './ConfettiLottie';
-import SuccessLottie from './SuccessLottie';
+
+const ConfettiLottie = dynamic(() => import('./ConfettiLottie'), { ssr: false });
+const SuccessLottie = dynamic(() => import('./SuccessLottie'), { ssr: false });
 
 export default function CheckoutSuccessContainer() {
   return (
