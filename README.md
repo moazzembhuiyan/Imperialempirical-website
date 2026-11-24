@@ -1,79 +1,138 @@
-# Empirical
+<div align="center">
 
-Empirical is a fashion and lifestyle storefront built with Next.js. Browse the
-product collection, explore articles and events, and manage your account, cart,
-and orders.
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:1E3A8A,100:38BDF8&height=180&section=header&text=Empirical&fontSize=40&fontColor=ffffff&fontAlignY=36&desc=Fashion%20%26%20lifestyle%20storefront&descAlignY=58&descSize=16" alt="Empirical" />
 
-## Features
+<p><b>🛍️ E-commerce Website</b></p>
 
-- Product catalog and product detail pages
-- Articles, events, gallery, philosophy, and contact pages
-- Account registration, sign-in, and password recovery
-- Authenticated profile, shopping cart, and order history
-- Responsive interface with animated elements
+<p>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
+  <img src="https://img.shields.io/badge/Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Toolkit" />
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Lottie-00DDB3?style=for-the-badge&logo=lottiefiles&logoColor=white" alt="Lottie" />
+</p>
 
-## Tech stack
+</div>
 
-- [Next.js](https://nextjs.org/) 16 with the App Router
-- [React](https://react.dev/) 19 and [TypeScript](https://www.typescriptlang.org/)
-- [Redux Toolkit](https://redux-toolkit.js.org/) and RTK Query
-- [Tailwind CSS](https://tailwindcss.com/)
+## 📖 Overview
 
-## Requirements
+**Empirical** is a fashion and lifestyle storefront built with **Next.js**. Customers can browse the product collection, read articles, explore events and the brand gallery, and manage their account, cart and orders.
 
-- Node.js 20.9 or later
-- npm
-- An API server URL for the application backend
+## ✨ Key Features
 
-## Getting started
+### 🛒 Shopping
 
-1. Install dependencies:
+- Product catalog & product detail pages
+- Shopping cart and order success flow
+- Order history in the user profile
 
-   ```bash
-   npm install
-   ```
+### 📰 Content
 
-2. Create `.env.local` in the project root and set the API base URL:
+- Finance articles with detail pages
+- Events with detail pages
+- Gallery, Philosophy and Contact pages
 
-   ```env
-   NEXT_PUBLIC_BASE_URL=https://your-api.example.com
-   ```
+### 🔐 Accounts
 
-   Replace the example URL with the backend URL for your environment. The
-   value should be the API origin, without a trailing endpoint path.
+- Sign up, login, OTP verification, forgot & update password
+- Protected routes via middleware
+- Persisted auth state
 
-3. Start the development server:
+### 🎨 Experience
 
-   ```bash
-   npm run dev
-   ```
+- Smooth animations with Framer Motion & Lottie
+- Carousels with Embla & Splide
+- Custom loading & 404 pages
 
-4. Open [http://localhost:3000](http://localhost:3000).
+## 🛠️ Tech Stack
 
-## Available scripts
+| Category | Technology |
+|---|---|
+| **Framework** | Next.js 16 (App Router) · React 19 |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS v4 |
+| **UI** | shadcn/ui (Radix) · Lucide · Sonner |
+| **State** | Redux Toolkit · Redux Persist |
+| **Animation** | Framer Motion · Lottie · React Type Animation |
+| **Carousels** | Embla Carousel · Splide |
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ and npm
+
+### Installation
+
+```bash
+git clone https://github.com/moazzembhuiyan/imperialempirical-website.git
+cd imperialempirical-website
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+NEXT_PUBLIC_BASE_URL=
+```
+
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_BASE_URL` | Backend API base URL |
+
+### Run
+
+```bash
+npm run dev
+# open http://localhost:3000
+```
+
+## 📜 Available Scripts
 
 | Command | Description |
-| --- | --- |
+|---|---|
 | `npm run dev` | Start the development server |
 | `npm run build` | Create a production build |
-| `npm start` | Serve the production build |
+| `npm run start` | Run the production build |
+| `npm run typecheck` | Run TypeScript type checking |
 | `npm run lint` | Run ESLint |
-| `npm run typecheck` | Check TypeScript types |
 
-## Project structure
+## 📁 Project Structure
 
 ```text
 src/
-  app/         App Router pages and layouts
-  component/   Shared and page-specific UI components
-  Hooks/       Data-fetching hooks
-  redux/       Redux store, slices, and API services
-  assets/      Local images and branding
-public/        Static assets
+├── app/
+│   ├── (auth)/      # Login, sign-up, OTP, password
+│   ├── (public)/    # Products, articles, events, gallery...
+│   └── (private)/   # Cart & profile
+├── components/      # UI components
+├── redux/           # Store & API
+├── lottie/          # Animations
+└── middleware.ts    # Route protection
 ```
 
-## Deployment
+## 📝 More Documentation
 
-Build the project with `npm run build`, then run `npm start` in an environment
-where `NEXT_PUBLIC_BASE_URL` points to the appropriate backend API. The project
-can also be deployed to any platform that supports Next.js.
+Detailed developer notes are available in [`docs/NOTES.md`](docs/NOTES.md).
+
+---
+
+<div align="center">
+
+### 👨‍💻 Developed by [Moazzem Hossen Bhuiyan](https://github.com/moazzembhuiyan)
+
+<sub>Mobile App Developer (React Native) • Web Developer</sub>
+
+<p>
+  <a href="https://github.com/moazzembhuiyan"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
+  <a href="https://www.linkedin.com/in/moazzem-hossen-bhuiyan-325432331/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:moazzembhuiyan394@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+</p>
+
+<sub>⭐ If you like this project, consider giving it a star!</sub>
+
+</div>
